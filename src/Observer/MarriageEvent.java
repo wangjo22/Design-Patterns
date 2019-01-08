@@ -3,9 +3,7 @@ package Observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MarriageEvent implements Subject {
-
-    private List<Observer> observers;
+public class MarriageEvent extends Subject {
     private String location;
     private String date;
     private String bride;
@@ -13,7 +11,6 @@ public class MarriageEvent implements Subject {
     private int numGuest;
 
     public MarriageEvent(String location, String date, String bride, String groom, int numGuest) {
-        this.observers = new ArrayList<Observer>();
         this.location = location;
         this.date = date;
         this.bride = bride;

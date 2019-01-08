@@ -17,6 +17,7 @@ public class StaffObserver implements Observer, DisplayInformation {
         this.marriageEvent.RegisterObserver(this);
     }
 
+    @Override
     public void update(String location, String date, String bride, String groom, int numGuest) {
         this.location = location;
         this.date = date;

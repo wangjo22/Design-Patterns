@@ -6,8 +6,9 @@ public class GuestObserver implements Observer, DisplayInformation {
     private String bride;
     private String groom;
     private String guest;
+    Subject marriageEvent;
     private int numGuest;
-    private Subject marriageEvent;
+
 
     public GuestObserver(String name) {
         this.guest = name;
@@ -17,7 +18,7 @@ public class GuestObserver implements Observer, DisplayInformation {
         this.marriageEvent = marriageEvent;
         this.marriageEvent.RegisterObserver(this);
     }
-
+    @Override
     public void update(String location, String date, String bride, String groom, int numGuest) {
         this.location = location;
         this.date = date;
